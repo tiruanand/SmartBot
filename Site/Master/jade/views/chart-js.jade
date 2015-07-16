@@ -1,0 +1,28 @@
+h3 Analysis
+
+.container-fluid(ng-controller='NewFlotChartController')
+  .row.mb-lg
+    .col-lg-
+      h4 Accelero Meter Chart 
+      div
+        flot(dataset='newacceleroMeterData', options='abarOptions', height="250px")        
+  .row.mb-lg
+    .col-lg-
+      h4 Orientation Chart 
+      div
+        flot(dataset='neworientationData', options='abarOptions', height="250px")        
+  .row.mb-lg
+    .col-lg-
+      h4 Position Radar Chart 
+      div
+        flot(dataset='newpositionData', options='aradarOptions', height="250px")        
+  .row.mb-lg
+    .col-lg-
+      h4 Velocity Radar Chart 
+      div
+        flot(dataset='newvelocityData', options='aradarOptions', height="250px")        
+  .row.mb-lg
+    .col-lg-
+      h4 Acceleration Chart 
+      div
+        flot(dataset='newaccelerationData', options='abarOptions', height="250px")

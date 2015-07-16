@@ -1,0 +1,82 @@
+[
+  {
+    "text": "Main Navigation",
+    "heading": "true",
+    "translate": "sidebar.heading.HEADER"
+  },
+  {
+    "text": "Dashboard",
+    "sref": "app.dashboard",
+    "icon": "icon-speedometer",
+    "alert": "3" ,
+    "label": "label label-info", 
+    "translate": "sidebar.nav.DASHBOARD"
+  },
+  {
+    "text": "Analysis",
+    "sref": "app.chart-js",
+    "icon": "icon-graph",
+    "translate": "sidebar.nav.connecti.ANALYSIS"
+  },
+  {
+    "text": "Share, Challenges",
+    "sref": "app.chart-radial",
+    "icon": "icon-cup",
+    "translate": "sidebar.nav.connecti.CHALLENGES"
+  },
+  {
+    "text": "Mentoring",
+    "sref": "app.chart-radial",
+    "icon": "icon-layers",
+    "translate": "sidebar.nav.connecti.MENTORING"
+  },
+  {
+    "text": "Learning",
+    "sref": "app.dashboard_v2",
+    "icon": "icon-grid",
+    "translate": "sidebar.nav.connecti.LEARNING"
+  },
+  {
+    "text": "Components",
+    "heading": "true",
+    "translate": "sidebar.heading.COMPONENTS"
+  },
+  {
+    "text": "Charts",
+    "sref": "#",
+    "icon": "icon-graph",
+    "submenu": [
+      { "text": "Flot",   "sref": "app.chart-flot", "translate": "sidebar.nav.chart.FLOT" },
+      { "text": "Radial", "sref": "app.chart-radial", "translate": "sidebar.nav.chart.RADIAL" },
+      { "text": "Chart JS", "sref": "app.chart-js" },
+      { "text": "Rickshaw", "sref": "app.chart-rickshaw" },
+      { "text": "MorrisJS", "sref": "app.chart-morris" },
+      { "text": "Chartist", "sref": "app.chart-chartist" }
+    ],
+    "translate": "sidebar.nav.chart.CHART"
+  },
+  {
+    "text": "Maps",
+    "sref": "#",
+    "icon": "icon-map",
+    "submenu": [
+      {"text": "Google Maps",   "sref": "app.maps-google", "translate": "sidebar.nav.map.GOOGLE" },
+      {"text": "Vector Maps",   "sref": "app.maps-vector", "translate": "sidebar.nav.map.VECTOR" }
+    ],
+    "translate": "sidebar.nav.map.MAP"
+  },
+  {
+    "text": "SignIn",
+    "sref": "#",
+    "icon": "icon-doc",
+    "submenu": [
+      { "text": "Login",            "sref": "page.login", "translate": "sidebar.nav.pages.LOGIN" },
+      { "text": "Sign up",          "sref": "page.register", "translate": "sidebar.nav.pages.REGISTER" },
+      { "text": "Recover Password", "sref": "page.recover", "translate": "sidebar.nav.pages.RECOVER" },
+      { "text": "Lock",             "sref": "page.lock", "translate": "sidebar.nav.pages.LOCK" },
+      { "text": "Starter Template", "sref": "app.template", "translate": "sidebar.nav.pages.STARTER" },
+      { "text": "404", "sref": "page.404" }
+    ],
+    "translate": "sidebar.nav.pages.PAGES"
+  }
+]
