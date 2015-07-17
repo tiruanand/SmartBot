@@ -265,6 +265,46 @@ App.controller('ChartJSController', ["$scope", "colors", function($scope, colors
 App.controller('NewFlotChartController', ['$scope', 'ChartData', '$timeout', function($scope, ChartData, $timeout) {
   'use strict';
 
+
+$scope.renderers = [{
+          id: 'bar',
+          name: 'Accelerometer',
+          unit: 'accelerometer'
+      }, {
+          id: 'bar',
+          name: 'Orientation',
+          unit: 'gyroscope'
+      }, {
+          id: 'bar',
+          name: 'Position',
+          unit: 'translational-pos'
+      }, {
+          id: 'bar',
+          name: 'Velocity',
+          unit: 'rvelocity'
+      }, {
+          id: 'bar',
+          name: 'Acceleration',
+          unit: 'racceleration'
+      }];
+
+  $scope.rendererChanged = function(id) {
+      //$scope['options' + id] = {
+      //    renderer: $scope['renderer' + id].id
+      //};
+      $scope.analysisName = $scope['renderer' + id].name;
+      $scope.analysisData = ChartData.load('server/chart/' + $scope['renderer' + id].unit + '.json');
+  };
+
+
+  $scope.options0 = {
+    renderer: 'area'
+  };
+
+  $scope.renderer0 = $scope.renderers[0];
+  $scope.analysisName = $scope['renderer0'].name;
+  $scope.analysisData = ChartData.load('server/chart/' + $scope['renderer0'].unit + '.json');
+
 // start smart custom charts
   // Custom charts
   // ----------------------------------- 
@@ -305,6 +345,42 @@ $scope.aradarOptions = {
     datasetStrokeWidth : 2,
     datasetFill : true
   };
+
+
+    $scope.abarStackedOptions = {
+      series: {
+          stack: true,
+          bars: {
+              align: 'center',
+              lineWidth: 0,
+              show: true,
+              barWidth: 0.6,
+              fill: 0.9
+          }
+      },
+      grid: {
+          borderColor: '#eee',
+          borderWidth: 1,
+          hoverable: true,
+          backgroundColor: '#fcfcfc'
+      },
+      tooltip: true,
+      tooltipOpts: {
+          content: function (label, x, y) { return x + ' : ' + y; }
+      },
+      xaxis: {
+          tickColor: '#fcfcfc',
+          mode: 'categories'
+      },
+      yaxis: {
+          //min: 0,
+          //max: 20, // optional: use it for a clear represetation
+          position: ($scope.app.layout.isRTL ? 'right' : 'left'),
+          tickColor: '#eee'
+      },
+      shadowSize: 0
+  };
+
 
   $scope.asplineDataOptions = {
       series: {

@@ -1,28 +1,19 @@
 h3 Analysis
 
+
+
+
 .container-fluid(ng-controller='NewFlotChartController')
-  .row.mb-lg
-    .col-lg-
-      h4 Accelero Meter Chart 
-      div
-        flot(dataset='newacceleroMeterData', options='abarOptions', height="250px")        
-  .row.mb-lg
-    .col-lg-
-      h4 Orientation Chart 
-      div
-        flot(dataset='neworientationData', options='abarOptions', height="250px")        
-  .row.mb-lg
-    .col-lg-
-      h4 Position Chart 
-      div
-        flot(dataset='newpositionData', options='abarOptions', height="250px")        
-  .row.mb-lg
-    .col-lg-
-      h4 Velocity Chart 
-      div
-        flot(dataset='newvelocityData', options='abarOptions', height="250px")        
-  .row.mb-lg
-    .col-lg-
-      h4 Acceleration Chart 
-      div
-        flot(dataset='newaccelerationData', options='abarOptions', height="250px") 
+  .panel.panel-default
+    .panel-heading Choose your Analysis
+    .panel-body
+      form.form-inline.mt-lg
+        select.form-control(ng-model='renderer0', ng-options='renderer.name for renderer in renderers', ng-change='rendererChanged(0)')
+
+  .panel.panel-default
+    .panel-body
+      .row.mb-lg
+        .col-lg-
+          h4 {{analysisName}} Chart 
+          div
+            flot(dataset='analysisData', options='abarOptions', height="250px")        
